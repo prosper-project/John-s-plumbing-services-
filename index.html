@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24/7 Emergency Plumber Los Angeles | John’s Plumbing & Drain Services</title>
+    <meta name="description" content="Fast, affordable, and dependable plumbing in Los Angeles. 25+ years experience. Licensed & Insured. Call now for same-day emergency service!">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #004aad;
+            --urgent-orange: #ff5e00;
+            --trust-green: #28a745;
+            --dark-grey: #333;
+            --light-grey: #f4f4f4;
+            --white: #ffffff;
+            --overlay-dark: rgba(0,0,0,0.6);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--dark-grey); scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+
+        /* --- UTILITIES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .btn { display: inline-block; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-call { background: var(--urgent-orange); color: white; font-size: 1.2rem; animation: pulse 2s infinite; }
+        .btn-book { background: var(--primary-blue); color: white; }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 94, 0, 0); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- HEADER & HERO --- */
+        header { background: var(--white); padding: 10px 0; border-bottom: 3px solid var(--primary-blue); position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); }
+        
+        /* Updated Hero to reference provided image */
+        .hero { 
+            background: linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
+                        url('watermarked_img_14567705973079925729.png') no-repeat center center/cover;
+            color: white; padding: 100px 0; text-align: center; 
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+        .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap; }
+        .badge { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.3); }
+
+        /* --- URGENCY BAR --- */
+        .urgency-bar { background: #ff0000; color: white; text-align: center; padding: 10px; font-weight: bold; position: relative; z-index: 1001; }
+        .urgency-bar a { color:white; text-decoration: none; }
+
+        /* --- SERVICES GRID --- */
+        .section-padding { padding: 80px 0; }
+        .text-center { text-align: center; margin-bottom: 40px; }
+        
+        /* Services as visual grid from the reference image */
+        .visual-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 10px; 
+            margin-top: 40px;
+        }
+        .visual-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 16 / 10;
+        }
+        .visual-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .visual-item:hover img {
+            transform: scale(1.1);
+        }
+        .visual-item .overlay-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* --- WHY CHOOSE US --- */
+        .why-us { background: var(--light-grey); }
+        .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature { text-align: center; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .feature i { font-size: 2.5rem; color: var(--trust-green); margin-bottom: 15px; }
+
+        /* --- CONTACT & MAP --- */
+        .contact-map-flex { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+            margin-top: 40px; 
+            align-items: flex-start;
+        }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-form { flex: 1; min-width: 300px; background: var(--white); padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 8px; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; }
+        
+        .map-container {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .map-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- STICKY MOBILE CTA --- */
+        .sticky-footer {
+            position: fixed; bottom: 0; width: 100%; background: var(--urgent-orange);
+            display: none; justify-content: center; align-items: center; z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+        .sticky-footer a { color: white; text-decoration: none; padding: 18px; font-weight: bold; font-size: 1.2rem; width: 100%; text-align: center; text-transform: uppercase; }
+
+        /* --- EXIT POPUP --- */
+        #exit-popup {
+            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: white; padding: 40px; z-index: 10001; border: 5px solid var(--urgent-orange);
+            box-shadow: 0 0 100px rgba(0,0,0,0.5); text-align: center; width: 90%; max-width: 400px;
+            border-radius: 8px;
+        }
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 70px 0; }
+            .nav-flex { flex-direction: column; gap: 10px; }
+            .section-padding { padding: 50px 0; }
+            .sticky-footer { display: flex; }
+            body { padding-bottom: 60px; } /* Space for sticky footer */
+            .visual-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    
+    <!-- JSON-LD Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlumbingService",
+      "name": "John's Plumbing & Drain Services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3847 Brunswick Ave",
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "postalCode": "90039",
+        "addressCountry": "US"
+      },
+      "telephone": "+13234227485",
+      "url": "https://johnsplumber.com",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "$$",
+      "image": "watermarked_img_14567705973079925729.png"
+    }
+    </script>
+</head>
+<body>
+
+    <div class="urgency-bar">
+        🚨 Emergency? Call Now for Immediate Service: <a href="tel:+13234227485">(323) 422-7485</a>
+    </div>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo"><i class="fas fa-faucet"></i> JOHN'S PLUMBING</div>
+            <div>
+                <a href="tel:+13234227485" class="btn btn-call"><i class="fas fa-phone"></i> (323) 422-7485</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>24/7 Emergency Plumber in Los Angeles</h1>
+            <p>Fast, Reliable Service. 25+ Years Experience. Licensed & Insured. Same-Day Appointments Available.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+13234227485" class="btn btn-call">CALL NOW - IMMEDIATE HELP</a>
+                <a href="#book" class="btn btn-book">BOOK ONLINE</a>
+            </div>
+            <div class="trust-badges">
+                <span class="badge"><i class="fas fa-check"></i> Licensed & Insured</span>
+                <span class="badge"><i class="fas fa-star"></i> 4.8/5 Rating</span>
+                <span class="badge"><i class="fas fa-rainbow"></i> LGBTQ+ Friendly</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Grid section replaces the simple grid -->
+    <section class="section-padding container">
+        <h2 class="text-center">Our Expert Services</h2>
+        <p class="text-center" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-top: -20px; margin-bottom: 40px;">From emergency repairs to routine maintenance, John's Plumbing delivers dependable solutions for homeowners and businesses across Los Angeles.</p>
+        
+        <div class="visual-grid">
+            <div class="visual-item">
+                <img src="watermarked_img_14567705973079925729.png" alt="Emergency Plumbing Repair">
+                <div class="overlay-text">Emergency Plumbing</div>
+            </div>
+            <div class="visual-item">
+                <img src="watermarked_img_14567705973079925729.png" alt="Drain Cleaning Service">
+                <div class="overlay-text">Drain Cleaning</div>
+            </div>
+            <div class="visual-item">
+                <img src="watermarked_img_14567705973079925729.png" alt="Water Heater Installation">
+                <div class="overlay-text">Water Heaters</div>
+            </div>
+            <div class="visual-item">
+                <img src="watermarked_img_14567705973079925729.png" alt="Sewer Line Inspection">
+                <div class="overlay-text">Sewer Repair</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us section-padding">
+        <div class="container">
+            <h2 class="text-center">Why Los Angeles Trusts John's Plumbing</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Availability</h3>
+                    <p>Day or night, we're ready to take your emergency call and dispatch a certified technician.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-history"></i>
+                    <h3>25+ Years Exp</h3>
+                    <p>Our deep expertise ensures that even complex plumbing issues are fixed right the first time.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent pricing and high-quality service without the hidden "emergency" surcharges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container" id="book">
+        <div class="contact-map-flex">
+            <div class="contact-info">
+                <h2>Request Immediate Help</h2>
+                <p>Proudly serving the Greater Los Angeles area, including Echo Park, Silver Lake, Glendale, and beyond. Contact us for fast service.</p>
+                <div style="margin-top: 20px; background: var(--light-grey); padding: 20px; border-radius: 8px;">
+                    <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong><br>3847 Brunswick Ave,<br>Los Angeles, CA 90039</p>
+                    <p style="margin-top: 10px;"><strong><i class="fas fa-phone"></i> Phone:</strong><br><a href="tel:+13234227485" style="color: var(--primary-blue); font-weight: bold; text-decoration: none;">(323) 422-7485</a></p>
+                </div>
+                <!-- Integrated static map centering on the address -->
+                <div class="map-container">
+                    <img src="watermarked_img_14567705973079925729.png" alt="Map showing John's Plumbing service area in Los Angeles near 3847 Brunswick Ave">
+                </div>
+            </div>
+            
+            <form class="contact-form" action="#">
+                <h3 style="margin-bottom: 20px; color: var(--primary-blue);">Book Your Appointment</h3>
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="tel" placeholder="Phone Number (e.g., 323-422-7485)" required>
+                <textarea rows="5" placeholder="Describe your plumbing issue (e.g., clogged drain, leaky faucet)..."></textarea>
+                <button type="submit" class="btn btn-book" style="width:100%">REQUEST IMMEDIATE HELP</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="background: var(--dark-grey); color: rgba(255,255,255,0.8); padding: 50px 0; text-align: center; border-top: 3px solid var(--primary-blue);">
+        <div class="container">
+            <div class="logo" style="color: white; font-size: 1.8rem; margin-bottom: 15px;"><i class="fas fa-faucet"></i> JOHN'S PLUMBING</div>
+            <p>&copy; 2026 John’s Plumbing & Drain Services. All Rights Reserved.</p>
+            <p>Licensed & Insured | Serving Greater Los Angeles</p>
+            <p style="margin-top: 10px;">3847 Brunswick Ave, Los Angeles, CA 90039</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Footer -->
+    <div class="sticky-footer">
+        <a href="tel:+13234227485"><i class="fas fa-phone"></i> CALL NOW: (323) 422-7485</a>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div id="exit-popup">
+        <h2>WAIT! DON'T GO!</h2>
+        <p style="font-size: 1.5rem; color: var(--urgent-orange); margin: 15px 0;"><strong>GET $25 OFF</strong></p>
+        <p>Your first service when you call us right now!</p>
+        <a href="tel:+13234227485" class="btn btn-call" style="margin-top:20px; display:block;">CLAIM DISCOUNT NOW</a>
+        <button onclick="closePopup()" style="margin-top:15px; background:none; border:none; text-decoration:underline; cursor:pointer; color: #777;">No thanks, I'll pay full price</button>
+    </div>
+
+    <script>
+        // Exit Intent Logic
+        const overlay = document.getElementById('overlay');
+        const popup = document.getElementById('exit-popup');
+        
+        let popupShown = false;
+
+        document.addEventListener('mouseleave', (e) => {
+            // Trigger when mouse moves out of the viewport (top)
+            if (e.clientY < 0 && !popupShown) {
+                showPopup();
+            }
+        });
+
+        function showPopup() {
+            overlay.style.display = 'block';
+            popup.style.display = 'block';
+            popupShown = true;
+        }
+
+        function closePopup() {
+            overlay.style.display = 'none';
+            popup.style.display = 'none';
+        }
+
+        // Close popup on overlay click
+        overlay.addEventListener('click', closePopup);
+    </script>
+</body>
+</html>
